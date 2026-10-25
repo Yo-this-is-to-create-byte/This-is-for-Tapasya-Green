@@ -203,7 +203,7 @@ export default function ContactPage() {
           <iframe
             title="Prochem Tapasya location"
             data-testid="contact-map"
-            src="https://www.google.com/maps?q=Mumbai%2C%20Maharashtra%2C%20India&output=embed"
+            src="https://www.google.com/maps?q=Pune%2C%20Maharashtra%2C%20India&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
