@@ -17,7 +17,6 @@ from routes.enquiries import router as enquiries_router
 from routes.content import router as content_router
 from routes.uploads import router as uploads_router
 from seed import seed_defaults
-from storage import init_storage
 
 # --- MongoDB ---
 mongo_url = os.environ["MONGO_URL"]
@@ -62,13 +61,7 @@ logger = logging.getLogger(__name__)
 # --- Startup: bootstrap admin + seed + indexes ---
 @app.on_event("startup")
 async def on_startup():
-    # Object storage session key
-    try:
-        init_storage()
-        logger.info("Object storage initialized")
-    except Exception as e:
-        logger.error(f"Storage init failed: {e}")
-
+    
     # Indexes
     try:
         await db.users.create_index("email", unique=True)
