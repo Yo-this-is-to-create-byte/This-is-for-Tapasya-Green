@@ -42,8 +42,15 @@ function ImageField({ label, value, onChange, testid }) {
       <span className="font-mono uppercase text-[0.6rem] tracking-[0.2em] text-ink/50 block mb-1">{label}</span>
       <div className="flex items-start gap-3">
         {isImg && (
-          <img src={value} alt="" data-testid={`${testid}-preview`} className="w-20 h-20 object-cover border border-black/10 bg-slate-50" />
-        )}
+<img
+  src={resolveFileUrl(value)}
+  alt={label}
+  data-testid={`${testid}-preview`}
+  className="w-20 h-20 object-cover border border-black/10 bg-slate-50"
+  onError={(e) => {
+    e.currentTarget.style.display = "none";
+  }}
+/>        )}
         <div className="flex-1">
           <input
             className="w-full bg-white border border-black/15 px-3 py-2 font-mono text-sm focus:outline-none focus:border-tapasya-blue"
@@ -95,7 +102,7 @@ function FileField({ label, value, onChange, testid }) {
         {hasFile ? (
           <>
             <a
-              href={value}
+              href={resolveFileUrl(value)}
               target="_blank"
               rel="noopener noreferrer"
               data-testid={`${testid}-link`}
@@ -162,7 +169,7 @@ function ImagesField({ label, value, onChange, testid }) {
       <div className="flex flex-wrap gap-3">
         {arr.map((u, i) => (
           <div key={`${u}-${i}`} className="relative group">
-            <img src={u} alt="" data-testid={`${testid}-thumb-${i}`} className="w-20 h-20 object-cover border border-black/10 bg-slate-50" />
+            <img   src={resolveFileUrl(u)}   alt={`Gallery image ${i + 1}`}   data-testid={`${testid}-thumb-${i}`}   className="w-20 h-20 object-cover border border-black/10 bg-slate-50" />
             <button
               type="button"
               onClick={() => onChange(arr.filter((_, j) => j !== i))}
