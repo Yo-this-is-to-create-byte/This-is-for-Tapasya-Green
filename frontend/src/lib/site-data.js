@@ -84,6 +84,6 @@ export const INDUSTRIES = ["Pharmaceutical", "Nutraceutical", "Food", "Chemical"
 
 export const CONTACT = {
   email: "info@prochemtapasya.com",
-  phone: "+91 22 6666 0000",
+  phone: "+91 2135686275",
   address: "Prochem Tapasya, Industrial Estate, Mumbai, Maharashtra, India",
 };

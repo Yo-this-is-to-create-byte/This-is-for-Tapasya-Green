@@ -7,9 +7,9 @@ import api from "@/lib/api";
 
 const ENQUIRY_CHANNELS = [
   { key: "sales", title: "Sales Enquiry", body: "New machine, complete line or quotation request.", subject: "Sales Enquiry" },
-  { key: "technical", title: "Technical Enquiry", body: "Process, specification, scale-up or validation questions.", subject: "Technical Enquiry" },
   { key: "spares", title: "Spare Parts Enquiry", body: "Genuine OEM spares, wear parts and replacements.", subject: "Spare Parts Enquiry" },
   { key: "service", title: "Service Enquiry", body: "AMC, breakdown support and upgrades.", subject: "Service Enquiry" },
+  { key: "technical", title: "International Enquiry", body: "Process, specification, scale-up or validation questions.", subject: "Technical Enquiry" },
 ];
 
 const OFFICES = [
