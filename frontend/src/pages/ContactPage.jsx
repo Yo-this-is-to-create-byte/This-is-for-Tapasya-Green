@@ -13,10 +13,10 @@ const ENQUIRY_CHANNELS = [
 ];
 
 const OFFICES = [
-  { region: "Headquarters", name: "Mumbai, India", address: "Prochem Tapasya, Industrial Estate, Mumbai, Maharashtra, India", phone: CONTACT.phone },
-  { region: "Regional Office", name: "Middle East", address: "Dubai, United Arab Emirates", phone: "+971 4 000 0000" },
+  { region: "Headquarters", name: "Pune, India", address: " Gat No.448, Success Industrial Park, Nighoje, Tal. Khed, Dist. Pune 410 501, Maharashtra", phone: CONTACT.phone },
+  { region: "Regional Office", name: "Mumbai India", address: "Door No. A 212, Wagle Industrial Estate, Road No. 30, Wagle Estate, Thane West - 400604, Maharashtra", phone: "+971 4 000 0000" },
   { region: "Regional Partner", name: "South East Asia", address: "Singapore", phone: "+65 6000 0000" },
-  { region: "Regional Partner", name: "Africa", address: "Nairobi, Kenya", phone: "+254 700 000 000" },
+  { region: "Regional Partner", name: "Manufacturing Unit", address: "Gat No.448, Success Industrial Park, Nighoje, Tal. Khed, Dist. Pune 410 501, Maharashtra", phone: "+254 700 000 000" },
 ];
 
 const WHATSAPP = CONTACT.phone.replace(/[^0-9]/g, "");
