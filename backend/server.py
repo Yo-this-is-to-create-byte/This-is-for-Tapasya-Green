@@ -17,7 +17,6 @@ from routes.enquiries import router as enquiries_router
 from routes.content import router as content_router
 from routes.uploads import router as uploads_router
 from seed import seed_defaults
-from storage import init_storage
 
 # --- MongoDB ---
 mongo_url = os.environ["MONGO_URL"]
