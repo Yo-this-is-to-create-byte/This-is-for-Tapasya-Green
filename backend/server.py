@@ -61,13 +61,7 @@ logger = logging.getLogger(__name__)
 # --- Startup: bootstrap admin + seed + indexes ---
 @app.on_event("startup")
 async def on_startup():
-    # Object storage session key
-    try:
-        init_storage()
-        logger.info("Object storage initialized")
-    except Exception as e:
-        logger.error(f"Storage init failed: {e}")
-
+    
     # Indexes
     try:
         await db.users.create_index("email", unique=True)
