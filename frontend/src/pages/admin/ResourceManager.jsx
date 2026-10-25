@@ -2,6 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import api from "@/lib/api";
 import { Save, Plus, Trash2, Upload, X } from "lucide-react";
 
+const resolveFileUrl = (value) => {
+  if (typeof value !== "string" || !value.trim()) return "";
+
+  if (/^https?:\/\//i.test(value)) return value;
+
+  return new URL(value, api.defaults.baseURL).href;
+};
+
 const uploadFile = async (file) => {
   const fd = new FormData();
   fd.append("file", file);
